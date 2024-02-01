@@ -82,10 +82,10 @@ export default function Header() {
 
     return(
         <div>
-            <nav className='bg-blue-700 lg:w-[2400px] w-[400px] flex flex-row sm:flex-row py-4 inline-block align-middle justify-between text-white'>
+            <nav className=' lg:w-[2400px] w-[400px] flex flex-row sm:flex-row py-3 inline-block align-middle justify-between text-white'>
 
                 {/* ESCRITORIO */}
-                <div className='lg:flex hidden w-11/12 flex mt-4 text-center justify-center ml-14 text-white text-xl font-medium leading-normal not-italic'>
+                <div className='lg:flex hidden absolute w-11/12 flex mt-4 text-center justify-center ml-14 text-white text-xl font-medium leading-normal not-italic'>
                     <div className='sm:flex flex-col sm:align-center sm:mr-12 sm:flex-row sm:items-stretch sm:gap-8 mt-4 sm:mt-0'>
                         <div className=''>
                             <Image
@@ -159,7 +159,7 @@ export default function Header() {
                         />
                     </div>
                         {menuMobile && (
-                        <div className='absolute bg-blue-800 rounded mt-16 w-[400px] transition-all  duration-300 text-center shadow pb-2 left-1/2 transform -translate-x-1/2'>
+                        <div className='absolute bg-blue-700 rounded mt-16 w-[400px] transition-all  duration-300 text-center shadow pb-2 left-1/2 transform -translate-x-1/2'>
                             <h1 onClick={conocenosMobile} className=' cursor-pointer pb-2'>Conócenos</h1>
                                 {menuConocenos && (
                                     <div className=' border border-white bg-blue-600 rounded shadow  mt-2 ' >

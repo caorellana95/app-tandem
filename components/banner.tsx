@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Header from '@/components/header';
 import { useRouter } from 'next/navigation';
+import News from './news';
 
 
 
@@ -10,17 +11,17 @@ export default function Banner(){
     
     const router = useRouter();
     const redirectToContacto = () => {
-        router.push('/contactos');
+        router.push('/contacto');
     };
 
 
     return(
       <div className='bg-blue-800 w-full'>
-        <div style={{backgroundImage:`url('/images/bus.jpg')`}}  className=" sm:h-full bg-no-repeat sm:bg-cover bg-right-top bg-auto">
+        <div style={{backgroundImage:`url('/images/bus.jpg')`}}  className=" static sm:h-full bg-no-repeat sm:bg-cover bg-right-top bg-auto">
           <Header/>
           <div className=''>
             <div className='flex justify-end'>
-              <div className='mt-12'>
+              <div className='lg:mt-48'>
                 <div className='sm:relative text-center sm:mr-24 sm:ml-24 ml-16 sm:mt-72 sm:pb-96  pb-24'>
                   <h1 className='sm:text-5xl sm:mb-6 text-lg text-white ml-24 pb-2 font-bold'></h1>
                   <p className='text-white sm:text-3xl text-sm sm:mx-auto ml-24'>Contamos con una flota de "X" entre buses y vehículos, para más de "Y" clientes </p>
@@ -58,11 +59,13 @@ export default function Banner(){
                   <p onClick={redirectToContacto} className='cursor-pointer'>CONTACTO COMERCIAL</p>
                 </button>
               </div>
+              
             </div>
           </div>
           
         </div>
-            
+        <News/>
+
         </div>
         </div>
     )
