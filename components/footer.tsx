@@ -21,7 +21,7 @@ return(
             </div>
                 </div>
                 <h1 className='pb-4 text-[20px]'>Medios de contacto</h1>
-                    <div className='flex mb-4 items-center'>
+                    <div className='flex mb-5 items-center'>
                         <Image
                         alt='icon'
                         src={"/mail.jpg"}

@@ -39,7 +39,7 @@ export default function Header() {
     }
 
     const redirectToContacto = () => {
-        router.push('/contactos');
+        router.push('/contacto');
     };
 
     const redirectToQuienesSomos = () => {
@@ -89,11 +89,11 @@ export default function Header() {
                     <div className='sm:flex flex-col sm:align-center sm:mr-12 sm:flex-row sm:items-stretch sm:gap-8 mt-4 sm:mt-0'>
                         <div className=''>
                             <Image
-                                src={'/logo-tandem.png'}
+                                src={'/images/logo-tandem.png'}
                                 alt='Logo'
                                 width={322}
                                 height={1}
-                                className='sm:mr-6 ml-2'
+                                className='sm:mr-6 ml-12'
                             />
 
                         </div>
