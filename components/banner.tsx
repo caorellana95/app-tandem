@@ -29,7 +29,7 @@ export default function Banner(){
                   <div className='w-12 sm:w-48'>
                     <Image
                       alt='logo'
-                      src={'/iso.png'}
+                      src={'/images/iso.png'}
                       width={144}
                       height={24}
                       className=''
@@ -39,7 +39,7 @@ export default function Banner(){
                   <div className='w-12 sm:w-48'>
                     <Image
                       alt='logo'
-                      src={'/iso.png'}
+                      src={'/images/iso.png'}
                       width={144}
                       height={24}
                     />
@@ -48,7 +48,7 @@ export default function Banner(){
                   <div className='w-12 sm:w-48'>
                     <Image
                       alt='logo'
-                      src={'/iso.png'}
+                      src={'/images/iso.png'}
                       width={144}
                       height={24}
                   />

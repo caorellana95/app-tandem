@@ -12,19 +12,19 @@ export default function Trabajo(){
     };
 
     return(
-<div className='pb-8 mx-8'>
-                        <h1 className='pb-4 text-[20px]'>Trabaja con nosotros</h1>
-                        <div className='flex'>
-                            <Image
-                            alt='icon'
-                            src={"/icons/briefcase.svg"}
-                            className='cursor-pointer mr-2'
-                            onClick={redirectToTrabajar}
-                            width={40}
-                            height={40}
-                            />
-                        <p className="text-[20px]">Si quieres ser uno más de nosotros,</p>
-                        </div>
+        <div className='pb-8 mx-8'>
+            <h1 className='pb-4 text-[20px]'>Trabaja con nosotros</h1>
+                <div className='flex'>
+                    <Image
+                        alt='icon'
+                        src={"/icons/briefcase.svg"}
+                        className='cursor-pointer mr-2'
+                        onClick={redirectToTrabajar}
+                        width={40}
+                        height={40}
+                    />
+                    <p className="text-[20px]">Si quieres ser uno más de nosotros,</p>
                 </div>
+        </div>
     )
 }

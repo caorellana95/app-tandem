@@ -1,12 +1,10 @@
-'use client'
-
 import Image from 'next/image'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router';
 import Link from 'next/link'
 
 
-export default function Header() {
+export default function Header2() {
     const [menuConocenos, setMenuConocenos] = useState(false);
     const [menuFlota, setMenuFlota] = useState(false);
     const [menuMobile, setMenuMobile] = useState(false)
@@ -39,7 +37,7 @@ export default function Header() {
     }
 
     const redirectToContacto = () => {
-        router.push('/contacto');
+        router.push('/contacto-comercial');
     };
 
     const redirectToQuienesSomos = () => {
@@ -71,6 +69,10 @@ export default function Header() {
     const redirectToNServicios = () => {
         router.push('/nuestros-servicios');
     };
+
+    const redirectHome = () => {
+        router.push('/');
+    };
     
     
 
@@ -82,22 +84,15 @@ export default function Header() {
 
     return(
         <div>
-            <nav className=' lg:w-[2400px] w-[400px] flex flex-row sm:flex-row py-3 inline-block align-middle justify-between text-white'>
+            <nav className='bg-blue-800 flex flex-row sm:flex-row justify-between text-white'>
 
                 {/* ESCRITORIO */}
-                <div className='lg:flex hidden absolute w-11/12 flex mt-4 text-center justify-center ml-14 text-white text-xl font-medium leading-normal not-italic'>
-                    <div className='sm:flex flex-col sm:align-center sm:mr-12 sm:flex-row sm:items-stretch sm:gap-8 mt-4 sm:mt-0'>
-                        <div className=''>
-                            <Image
-                                src={'/images/logo-tandem.png'}
-                                alt='Logo'
-                                width={322}
-                                height={1}
-                                className='sm:mr-6 ml-12'
-                            />
+                <div className='sm:flex hidden w-full flex mt-4 text-center ml-14 text-white text-xl font-medium leading-normal not-italic'
+                    
+                >
+                    <div className='sm:flex flex-col sm:align-center sm:flex-row sm:items-stretch sm:gap-16 mt-4 sm:mb-1 sm:mt-0'>
+                    <h1 onClick={redirectHome} className='cursor-pointer text-3xl font-bold mt-2 pb-4 '>TANDEM</h1>
 
-                        </div>
-                        
                         <div className='ml-96 hover:bg-blue-700 py-3 text-start shadow '
                             onMouseEnter={desplegarConocenos}
                             onMouseLeave={ocultarConocenos}
@@ -121,7 +116,7 @@ export default function Header() {
                             onMouseEnter={desplegarFlota}
                             onMouseLeave={ocultarFlota}
                         >
-                            <h1 className='cursor-pointer text-center px-2'>Nuestra Flota</h1>
+                            <h1 className='cursor-pointer px-2 text-center'>Nuestra Flota</h1>
                                 {menuFlota && (
                                     <div className='absolute w-96 bg-blue-700 rounded shadow p-4 mt-2' >
                                         <a onClick={redirectToFlota} className='cursor-pointer block mb-2 hover:bg-blue-800'>Flota</a>
@@ -139,27 +134,21 @@ export default function Header() {
 
                 {/* RESPONSIVE */}
                 <div className='sm:hidden flex'>
-                    <div>
-                        <Image
-                            src={'/images/logo-tandem.png'}
-                            alt='Logo'
-                            width={242}
-                            height={54}
-                            className='ml-2'
-                        />
-                    </div>
-                    <div>
+                    <div className='flex'>
                       <Image
                             src={'/images/menu.png'}
                             alt='Logo'
                             width={50}
                             height={4}
-                            className='ml-20'
+                            className='pl-2 py-2'
                             onClick={desplegarMovil}
                         />
+                        <div>
+                            <h1 onClick={redirectHome} className='text-3xl font-bold py-2 ml-24'>TANDEM</h1>
+                        </div>
                     </div>
                         {menuMobile && (
-                        <div className='absolute bg-blue-700 rounded mt-16 w-[400px] transition-all  duration-300 text-center shadow pb-2 left-1/2 transform -translate-x-1/2'>
+                        <div className='absolute bg-blue-800 rounded mt-16 w-full transition-all  duration-300 text-center shadow pb-2 left-1/2 transform -translate-x-1/2'>
                             <h1 onClick={conocenosMobile} className=' cursor-pointer pb-2'>Conócenos</h1>
                                 {menuConocenos && (
                                     <div className=' border border-white bg-blue-600 rounded shadow  mt-2 ' >

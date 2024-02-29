@@ -24,7 +24,7 @@ return(
                   <div className='flex mb-5 items-center'>
                     <Image
                         alt='icon'
-                        src={"/mail.jpg"}
+                        src={"/images/mail.jpg"}
                         className='me-2'
                         width={25}
                         height={24}

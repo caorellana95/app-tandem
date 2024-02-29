@@ -160,7 +160,7 @@ export default function News(){
         <div className="sm:hidden duration-100 mr-24 ml-28">
           <div>
                 <Image
-                  src={'/bus2.jpg'}
+                  src={'/images/bus2.jpg'}
                   alt='Logo'
                   width={450}
                   height={4}
